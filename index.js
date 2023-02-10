@@ -93,7 +93,7 @@ function statusupdate(id){
     var running = require('is-running')(pids.filter(z=>z.machine === id)[0].pid)
     var storage = []
     fs.readdirSync("./servers/"+id).map((c)=>{if(c === "start.txt") return;
-    if(c === "ngrok.txt" && !ngrok && ngroks.filter(z=>z.machine === id).length) {
+    if(c === "ngrok.txt" && ngroks.filter(z=>z.machine === id).length) {
      return ngrok = ngroks.filter(z=>z.machine === id)[0].url
     } else {try {storage.push({name:c,size:(fs.statSync("./servers/"+id+"/"+c).size)/1024})}catch{}}
   })
