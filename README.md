@@ -3,7 +3,7 @@ It is the best place to manage vds panel including in user panel which is very s
 To install Gilli, you can open the necessary file in the Install folder.<br>
 
 Support: https://discord.gg/4Xpwwz6pgN<br>
-Docs: https://dolphin-panel.gitbook.io/index/ <br>
+Docs: https://dolphin-panel.gitbook.io <br>
 Links:<br>
 https://github.com/DeveloperKubilay/Dolphin-panel <br>
 https://github.com/DeveloperKubilay/Doplin-Gills <br>
