@@ -201,6 +201,7 @@ await axios({url: x.url,signal: controller.signal,responseType: "stream"}).then(
   }if(code.ports.mainport) {
    await fs.writeFileSync("./servers/"+id+"/ngrok.txt",code.ngrok+" "+(5900+Number(code.ports.mainport)))
   }}else {try{await fs.unlinkSync("./servers/"+id+"/ngrok.txt")}catch{}}
+await setTimeoutp(settings.starttimeout)
 await setserver(id,"start")
 }catch (e){console.log(e);socket.emit("servers",{machine:code && code.id || id,err:true,code:"ERORR"});}
 }
