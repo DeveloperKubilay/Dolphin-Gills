@@ -72,7 +72,7 @@ if(ports.port){ports.port.map((x)=> port += ",hostfwd=tcp::"+x.panelport+"-:"+x.
   if(!ports.mainport && ports.vnc) {
     await fs.writeFileSync("./servers/"+id+"/ngrok.txt",ngrok+" "+(5900+Number(ports.vnc)))
   }if(ports.mainport) {
-    await fs.writeFileSync("./servers/"+id+"/ngrok.txt",ngrok+" "+(5900+Number(ports.mainport)))
+    await fs.writeFileSync("./servers/"+id+"/ngrok.txt",ngrok+" "+Number(ports.mainport))
   }
  }
 }catch (e){console.log(e);socket.emit("servers",{machine:id,err:true,code:"ERORR"});}}
@@ -199,7 +199,7 @@ await axios({url: x.url,signal: controller.signal,responseType: "stream"}).then(
   if(!code.ports.mainport && code.ports.vnc) {
    await fs.writeFileSync("./servers/"+id+"/ngrok.txt",code.ngrok+" "+(5900+Number(code.ports.vnc)))
   }if(code.ports.mainport) {
-   await fs.writeFileSync("./servers/"+id+"/ngrok.txt",code.ngrok+" "+(5900+Number(code.ports.mainport)))
+   await fs.writeFileSync("./servers/"+id+"/ngrok.txt",code.ngrok+" "+Number(code.ports.mainport))
   }}else {try{await fs.unlinkSync("./servers/"+id+"/ngrok.txt")}catch{}}
 await setTimeoutp(settings.starttimeout)
 await setserver(id,"start")
