@@ -36,7 +36,7 @@ json.servertoken = await question("Enter server token:",true)
 json.statusupdate = await question("How long will the reflection time on the panel be recommended(7000):",7000)
 json.diskupdate = await question("How much will it be to update the disk in the panel recommended(30000):",30000)
 console.log("If you want to the questions now, write directly otherwise enter and pass")
-var ip = await question("Do you want to change the ip adress:",false)
+var ip = await question("Do you want to change the ip address:",false)
 if(ip) json.ip = ip
 var network = await question("Do you want to change the command to connect to the network:",false)
 if(network) json["network-adapter"] = network
