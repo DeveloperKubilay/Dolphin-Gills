@@ -8,6 +8,7 @@ var json = {
 "network-adapter":"-net nic,model=e1000",
 "qemu":"qemu-system-x86_64",
 "runbackground":"-nographic",
+"ip":"",
 "windowsgraphic":"-vga vmware",
 "network":"-nic",
 "overstatustry":1,
@@ -45,5 +46,7 @@ var background = await question("Do you want to change the command to run in the
 if(background) json.runbackground = background
 var graphic = await question("Do you want to change the graphic command of Windows:",false)
 if(graphic) json.windowsgraphic = graphic
+var ip = await question("Do you want to change the ip adress:",false)
+if(ip) json.ip = ip
 fs.writeFileSync("../settings.json",JSON.stringify(json, undefined, 2))
 }
