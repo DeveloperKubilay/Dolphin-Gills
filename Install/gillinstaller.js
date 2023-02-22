@@ -36,6 +36,8 @@ json.servertoken = await question("Enter server token:",true)
 json.statusupdate = await question("How long will the reflection time on the panel be recommended(7000):",7000)
 json.diskupdate = await question("How much will it be to update the disk in the panel recommended(30000):",30000)
 console.log("If you want to the questions now, write directly otherwise enter and pass")
+var ip = await question("Do you want to change the ip adress:",false)
+if(ip) json.ip = ip
 var network = await question("Do you want to change the command to connect to the network:",false)
 if(network) json["network-adapter"] = network
 var networkp = await question("Do you want to change the network command used to open the port:",false)
@@ -46,7 +48,5 @@ var background = await question("Do you want to change the command to run in the
 if(background) json.runbackground = background
 var graphic = await question("Do you want to change the graphic command of Windows:",false)
 if(graphic) json.windowsgraphic = graphic
-var ip = await question("Do you want to change the ip adress:",false)
-if(ip) json.ip = ip
 fs.writeFileSync("../settings.json",JSON.stringify(json, undefined, 2))
 }
