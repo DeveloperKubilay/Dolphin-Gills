@@ -9,7 +9,12 @@ process.title = "Dolphin Gill"
 const settings = require('./settings.json')
 ngrok = require('ngrok');
 io = require('socket.io-client')
-socket = io("ws://"+settings.serverurl,{auth:{token: settings.servertoken,type:"gills",version:settings.version}});
+socket = io("ws://"+settings.serverurl,{auth:{
+token: settings.servertoken,
+type:"gills",
+version:settings.version,
+ip:settings.ip,
+}});
 var pids = [],ngroks = [],totaldisksize = 0
 
 async function createserver(id,os,ports,disks,ram,cpu,ngrok,tryl){try{
