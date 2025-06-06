@@ -34,4 +34,4 @@ To install Dolphin-Gills, simply open the necessary file in the Install folder.
 5. 🎉 Enjoy your new VDS management system!
 
 
-![Made with Love by DeveloperKubilay](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-DeveloperKubilay-red) ❤️
+![Made with Love by DeveloperKubilay](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-DeveloperKubilay-red) 
